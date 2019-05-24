@@ -10,7 +10,9 @@ class App extends React.Component {
 
    this.state = {
      characters: [],
+     filterName: ''
    }
+   this.handleFilter = this.handleFilter.bind(this);
  }
 componentDidMount(){
   this.getCharacters();
@@ -29,13 +31,22 @@ componentDidMount(){
     });
  }
  
+ handleFilter(e) {
+   const value = e.currentTarget.value;
+
+   this.setState({
+     filterName: value
+   })
+ }
   render() {
    return (
      <React.Fragment>
     <h1>Mis magos favoritos</h1>
-    <input type="text" />
+    <input type="text" onChange={this.handleFilter}/>
     <MagicList 
       characters={this.state.characters}
+      filterName={this.state.filterName}
+      handleFilter={this.handleFilter}
     />
     </React.Fragment>
    );

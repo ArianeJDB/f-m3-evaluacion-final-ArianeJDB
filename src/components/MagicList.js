@@ -5,7 +5,9 @@ class MagicList extends React.Component {
   render() {
     return(
       <ul className="list">
-      {this.props.characters.map(item => {
+      {this.props.characters
+        .filter(item => item.name.includes(this.props.filterName))
+        .map(item => {
         return (
           <li className="list-elements" key={item.id}>
             <MagicCard 

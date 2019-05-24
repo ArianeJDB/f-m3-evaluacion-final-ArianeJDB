@@ -1,7 +1,7 @@
 import React from 'react';
 import MagicCard from './MagicCard'
 
-class MagicList extends React.Component {
+class Home extends React.Component {
   render() {
     return(
       <ul className="list">
@@ -21,4 +21,4 @@ class MagicList extends React.Component {
     );
   }
 }
-export default MagicList;
+export default Home;

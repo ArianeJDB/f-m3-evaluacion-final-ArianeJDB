@@ -1,9 +1,9 @@
 import React from 'react';
-import {fetchCharacters} from './services/fetchCharacters';
 import './App.scss';
-import MagicList from './components/MagicList';
-import filterName from './Filters/FiterName';
+import {fetchCharacters} from './services/fetchCharacters';
+import Home from './components/Home';
 import FilterName from './Filters/FiterName';
+import {Switch, Route} from 'react-router-dom';
 
 
 class App extends React.Component {
@@ -43,17 +43,27 @@ componentDidMount(){
   render() {
    return (
      <React.Fragment>
-    <h1>Mis magos favoritos</h1>
-    <FilterName 
-    handleFilter={this.handleFilter}
-    />
-    
-    <MagicList 
-      characters={this.state.characters}
-      filterName={this.state.filterName}
-      handleFilter={this.handleFilter}
-    />
-    </React.Fragment>
+     <h1>Mis magos favoritos</h1>
+     <Switch>
+       <Route exact path="/" render={() => 
+        <Home
+          characters={this.state.characters}
+          filterName={this.state.filterName}
+          handleFilter={this.handleFilter}
+       />
+       }
+      />
+     </Switch>
+     <FilterName 
+     handleFilter={this.handleFilter}
+     />
+
+     <Home 
+       characters={this.state.characters}
+       filterName={this.state.filterName}
+       handleFilter={this.handleFilter}
+     />
+     </React.Fragment>
    );
  }
 }

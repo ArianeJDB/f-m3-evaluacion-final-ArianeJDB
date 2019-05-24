@@ -2,8 +2,10 @@ import React from 'react';
 import './App.scss';
 import {fetchCharacters} from './services/fetchCharacters';
 import Home from './components/Home';
-import FilterName from './Filters/FiterName';
+
 import {Switch, Route} from 'react-router-dom';
+//import MagicCard from './components/MagicCard';
+import CharacterDetail from './components/CharacterDetail'
 
 
 class App extends React.Component {
@@ -15,10 +17,13 @@ class App extends React.Component {
      filterName: ''
    }
    this.handleFilter = this.handleFilter.bind(this);
+   
  }
 componentDidMount(){
   this.getCharacters();
 }
+
+
 
  getCharacters(){
    fetchCharacters()
@@ -43,7 +48,6 @@ componentDidMount(){
   render() {
    return (
      <React.Fragment>
-     <h1>Mis magos favoritos</h1>
      <Switch>
        <Route exact path="/" render={() => 
         <Home
@@ -52,17 +56,16 @@ componentDidMount(){
           handleFilter={this.handleFilter}
        />
        }
-      />
+       />
+       <Route path="/detail/:magic" render={(takeParams) => 
+        <CharacterDetail 
+          takeParams={takeParams}
+          characters={this.state.characters}
+          
+        />
+       }
+       />
      </Switch>
-     <FilterName 
-     handleFilter={this.handleFilter}
-     />
-
-     <Home 
-       characters={this.state.characters}
-       filterName={this.state.filterName}
-       handleFilter={this.handleFilter}
-     />
      </React.Fragment>
    );
  }

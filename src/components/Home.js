@@ -13,7 +13,7 @@ class Home extends React.Component {
        />
       <ul className="list">
       {this.props.characters
-        .filter(item => item.name.includes(this.props.filterName))
+        .filter(item => item.name.toLocaleLowerCase().includes(this.props.filterName))
         .map(item => {
         return (
           <li className="list-elements" key={item.id}>

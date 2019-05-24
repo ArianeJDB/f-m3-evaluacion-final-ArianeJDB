@@ -60,7 +60,7 @@ componentDidMount(){
        <Route path="/detail/:magic" render={(takeParams) => 
         <CharacterDetail 
           takeParams={takeParams}
-          characters={this.state.characters}          
+          characters={this.state.characters}
         />
        }
        />

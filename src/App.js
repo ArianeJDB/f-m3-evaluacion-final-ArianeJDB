@@ -2,6 +2,8 @@ import React from 'react';
 import {fetchCharacters} from './services/fetchCharacters';
 import './App.scss';
 import MagicList from './components/MagicList';
+import filterName from './Filters/FiterName';
+import FilterName from './Filters/FiterName';
 
 
 class App extends React.Component {
@@ -42,7 +44,10 @@ componentDidMount(){
    return (
      <React.Fragment>
     <h1>Mis magos favoritos</h1>
-    <input type="text" onChange={this.handleFilter}/>
+    <FilterName 
+    handleFilter={this.handleFilter}
+    />
+    
     <MagicList 
       characters={this.state.characters}
       filterName={this.state.filterName}

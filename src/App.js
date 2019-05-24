@@ -4,7 +4,6 @@ import {fetchCharacters} from './services/fetchCharacters';
 import Home from './components/Home';
 
 import {Switch, Route} from 'react-router-dom';
-//import MagicCard from './components/MagicCard';
 import CharacterDetail from './components/CharacterDetail'
 
 
@@ -14,7 +13,8 @@ class App extends React.Component {
 
    this.state = {
      characters: [],
-     filterName: ''
+     filterName: '',
+     
    }
    this.handleFilter = this.handleFilter.bind(this);
    
@@ -60,8 +60,7 @@ componentDidMount(){
        <Route path="/detail/:magic" render={(takeParams) => 
         <CharacterDetail 
           takeParams={takeParams}
-          characters={this.state.characters}
-          
+          characters={this.state.characters}          
         />
        }
        />

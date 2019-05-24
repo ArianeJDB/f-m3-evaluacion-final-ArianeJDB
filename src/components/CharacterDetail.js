@@ -13,8 +13,16 @@ class CharacterDetail extends React.Component {
     return(
       <React.Fragment>
       {find !== undefined ? 
-      <p>{find.name}</p>
-    : <p>NO</p> }
+      <div>
+        <img src={find.image} alt={find.name}/>
+        <h2>{find.name}</h2>
+        <p>House: {find.house}</p>
+        <p>Year of birth: {find.yearOfBirth}</p>
+        <p>Patronus: {find.patronus}</p>
+        <p>{find.alive ? 'Está vivito y coleando' : 'Se murió muerto =('}</p>
+      </div>
+    : 
+    <p>=( eres muy muggle para tanta magia</p> }
      <Link to="/">Volver</Link>
     </React.Fragment>
     );

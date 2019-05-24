@@ -6,7 +6,7 @@ class MagicCard extends React.Component {
       <div className="magic-card">
         <img src={this.props.image} alt={this.props.name}/>
         <h2>{this.props.name}</h2>
-        <p>{this.props.house}</p>
+        <p>House: {this.props.house}</p>
       </div>
     );
   }

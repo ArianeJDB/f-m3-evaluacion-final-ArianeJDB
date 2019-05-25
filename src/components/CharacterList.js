@@ -3,7 +3,7 @@ import MagicCard from './CharacterCard'
 
 
 
-class Home extends React.Component {
+class CharacterList extends React.Component {
   render() {
     return(
       <React.Fragment>
@@ -28,4 +28,4 @@ class Home extends React.Component {
     );
   }
 }
-export default Home;
+export default CharacterList;

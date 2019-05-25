@@ -1,35 +1,24 @@
 import React from 'react';
-import MagicCard from './MagicCard'
-import FilterName from '../Filters/FilterName'
-
+import FilterName from '../Filters/FilterName';
+import CharacterList from './CharacterList'
 
 class Home extends React.Component {
   render() {
-    return(
+    return (
       <React.Fragment>
-      <h1>Mis magos favoritos</h1>
-      <FilterName 
-        handleFilter={this.props.handleFilter}
-       />
-      <ul className="list">
-      {this.props.characters
-        .filter(item => item.name.toLocaleLowerCase().includes(this.props.filterName))
-        .map(item => {
-        return (
-          <li className="list-element" key={item.id}>
-            <MagicCard 
-              image={item.image}
-              name={item.name}
-              house={item.house}
-              id={item.id}
-              />
-            
-          </li>
-        )
-      })}
-    </ul>
-    </React.Fragment>
+        <h1>Mis magos favoritos</h1>
+        <FilterName 
+          characters={this.props.characters} 
+          handleFilter={this.props.handleFilter} 
+          filterName={this.props.filterName}
+        />
+        <CharacterList 
+          characters={this.props.characters} 
+          filterName={this.props.filterName}
+        />
+      </React.Fragment>
     );
   }
 }
+
 export default Home;

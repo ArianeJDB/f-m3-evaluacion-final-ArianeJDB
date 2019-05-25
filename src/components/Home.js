@@ -1,7 +1,7 @@
 import React from 'react';
 import MagicCard from './MagicCard'
 import FilterName from '../Filters/FilterName'
-import {Link} from 'react-router-dom';
+
 
 class Home extends React.Component {
   render() {
@@ -20,8 +20,10 @@ class Home extends React.Component {
             <MagicCard 
               image={item.image}
               name={item.name}
-              house={item.house}/>
-            <Link to={`/detail/${item.id}`}>Ver más</Link>
+              house={item.house}
+              id={item.id}
+              />
+            
           </li>
         )
       })}

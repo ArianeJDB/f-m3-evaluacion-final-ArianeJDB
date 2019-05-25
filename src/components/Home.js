@@ -6,7 +6,7 @@ class Home extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <h1>Mis magos favoritos</h1>
+        <h1 className='title'>Mis magos favoritos</h1>
         <FilterName 
           characters={this.props.characters} 
           handleFilter={this.props.handleFilter} 

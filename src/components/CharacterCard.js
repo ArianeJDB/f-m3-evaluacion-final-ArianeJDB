@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-class MagicCard extends React.Component {
+class CharacterCard extends React.Component {
   render() {
     return(
       <div className="magic-card">
@@ -12,4 +12,4 @@ class MagicCard extends React.Component {
     );
   }
 }
-export default MagicCard;
+export default CharacterCard;

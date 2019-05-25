@@ -2,7 +2,6 @@ import React from 'react';
 import './App.scss';
 import {fetchCharacters} from './services/fetchCharacters';
 import Home from './components/Home';
-
 import {Switch, Route} from 'react-router-dom';
 import CharacterDetail from './components/CharacterDetail'
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import MagicCard from './MagicCard'
-import FilterName from '../Filters/FilterName'
+import MagicCard from './CharacterCard'
+
 
 
 class Home extends React.Component {

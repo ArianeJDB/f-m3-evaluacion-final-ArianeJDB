@@ -16,7 +16,7 @@ class Home extends React.Component {
         .filter(item => item.name.toLocaleLowerCase().includes(this.props.filterName))
         .map(item => {
         return (
-          <li className="list-elements" key={item.id}>
+          <li className="list-element" key={item.id}>
             <MagicCard 
               image={item.image}
               name={item.name}

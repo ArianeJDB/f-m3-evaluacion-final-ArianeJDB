@@ -1,10 +1,29 @@
 .magic-card {
-  width: 250px;
-  border: solid 2px black;
-  height: 350px;
+
+  //height: 350px;
+  
 }
 
 .img {
-  width: 160px;
+  //width: 160px;
   height: 220px;
+  margin-top: 30px;
+}
+
+.list-element {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  border: solid 2px black;
+  text-align: center;
+  padding-bottom: 30px;
+
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
 }

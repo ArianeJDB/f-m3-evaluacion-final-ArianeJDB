@@ -12,6 +12,11 @@ body {
   font-size: 24px;
   text-shadow: 4px 4px 4px #aaa;
   margin: 0;
+  background-image: url(https://vignette.wikia.nocookie.net/es.harrypotter/images/5/50/Wiki-background/revision/latest?cb=20140824005245);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-attachment: fixed;
 }
 
 header {

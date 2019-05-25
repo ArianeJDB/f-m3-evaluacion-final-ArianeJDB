@@ -13,9 +13,13 @@ class App extends React.Component {
    this.state = {
      characters: [],
      filterName: '',
+     filterHouses: []
      
    }
-   this.handleFilter = this.handleFilter.bind(this);
+   this.handleFilterName = this.handleFilterName.bind(this);
+  // this.handleFilterHouses = this.handleFilterHouses.bind(this);
+  // this.selectHouse = this.selectHouse.bind(this);
+   //this.handle = this.handle.bind(this);
    
  }
 componentDidMount(){
@@ -37,13 +41,48 @@ componentDidMount(){
     });
  }
  
- handleFilter(e) {
+ handleFilterName(e) {
    const value = e.currentTarget.value;
 
    this.setState({
      filterName: value
    })
  }
+
+//  selectHouse(user) {
+//    return !this.state.filterHouses.length || this.state.filterHouses.includes(user.house);
+//  }
+//  getHouse() {
+//    return this.state.filterHouses.filter(item => {
+//      return this.selectHouse(item)
+//    })
+//  }
+
+//  handle(e) {
+//    const { value, checked } = e.currentTarget;
+
+//    this.setState(prevState => {
+//      return {characters: {...prevState.characters,filterHouses: checked
+//          ? prevState.filterHouses.concat(value)
+//          :prevState.filterHouses.filter(item => item !== value)
+//        }
+//      }
+//    })
+//  }
+//  handleFilterHouses() {
+   
+//    return this.state.characters
+//     .filter(item => {
+//       if(!this.state.filterHouses.length) {
+//         return true;
+//       } else {
+//         return this.state.filterHouses.includes(item.house);
+//       }
+//  })
+ 
+// }
+
+
   render() {
    return (
      <React.Fragment>
@@ -52,7 +91,10 @@ componentDidMount(){
         <Home
           characters={this.state.characters}
           filterName={this.state.filterName}
-          handleFilter={this.handleFilter}
+          handleFilterName={this.handleFilterName}
+          //filterHouses={this.state.filterHouses}
+         // handleFilterHouses={this.handleFilterHouses}
+          //handle={this.handle}
        />
        }
        />

@@ -16,7 +16,7 @@ class Home extends React.Component {
         />
         <FilterHouses 
         //filterHouses={this.props.filterHouses}
-        //handleFilterHouses={this.props.handleFilterHouses}
+         handleFilterHouses={this.props.handleFilterHouses}
         //handle={this.props.handle}
         />
         

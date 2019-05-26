@@ -3,40 +3,40 @@ import React from 'react';
 class FilterHouses extends React.Component {
   render() {
     return(
-      <div className="search-houses">
-        <label>Gryffindor</label>
+      <form className="search-houses">
+        <label htmlFor="gryffindor">Gryffindor</label>
         <input 
           type="checkbox" 
-          name="Gryffindor" 
-          value="Gryffindor" 
-          // onChange={this.props.handle}
-          // checked={this.props.filterHouses.includes('Gryffindor')}
+          name="gryffindor" 
+          value="gryffindor" 
+          onChange={this.props.handleFilterHouses}
+          checked={true}
         />
-        <label>Slytherin</label>
+        <label htmlFor="Slytherin">Slytherin</label>
         <input 
           type="checkbox" 
           name="Slytherin" 
-          value="Slytherin"
-          // onChange={this.props.handleFilterHouses}
-          // checked={this.props.filterHouses.includes('Slytherin')}
+          value="slytherin"
+          onChange={this.props.handleFilterHouses}
+          checked={true}
         />
-        <label>Hufflepuff</label>
+        <label htmlFor="hufflepuff">Hufflepuff</label>
         <input 
           type="checkbox" 
-          name="Hufflepuff" 
-          value="Hufflepuff"
-          // onChange={this.props.handleFilterHouses}
-          // checked={this.props.filterHouses.includes('Hufflepuff')}
+          name="hufflepuff" 
+          value="hufflepuff"
+          onChange={this.props.handleFilterHouses}
+          checked={true}
         />
-        <label>Ravenclaw</label>
+        <label htmlFor="ravenclaw">Ravenclaw</label>
         <input 
           type="checkbox" 
-          name="Ravenclaw" 
-          value="Ravenclaw"
-          // onChange={this.props.handleFilterHouses}
-          // checked={this.props.filterHouses.includes('Ravenclaw')}
+          name="ravenclaw" 
+          value="ravenclaw"
+          onChange={this.props.handleFilterHouses}
+          checked={true}
         />
-      </div>
+      </form>
     );
   }
 }

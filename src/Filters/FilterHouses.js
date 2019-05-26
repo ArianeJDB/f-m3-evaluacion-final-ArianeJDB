@@ -7,34 +7,34 @@ class FilterHouses extends React.Component {
         <label htmlFor="gryffindor">Gryffindor</label>
         <input 
           type="checkbox" 
-          name="gryffindor" 
+          name="filterHouses" 
           value="gryffindor" 
           onChange={this.props.handleFilterHouses}
-          checked={true}
+          checked={false}
         />
         <label htmlFor="Slytherin">Slytherin</label>
         <input 
           type="checkbox" 
-          name="Slytherin" 
+          name="filterHouses" 
           value="slytherin"
           onChange={this.props.handleFilterHouses}
-          checked={true}
+          checked={false}
         />
         <label htmlFor="hufflepuff">Hufflepuff</label>
         <input 
           type="checkbox" 
-          name="hufflepuff" 
+          name="filterHouses" 
           value="hufflepuff"
           onChange={this.props.handleFilterHouses}
-          checked={true}
+          checked={false}
         />
         <label htmlFor="ravenclaw">Ravenclaw</label>
         <input 
           type="checkbox" 
-          name="ravenclaw" 
+          name="filterHouses" 
           value="ravenclaw"
           onChange={this.props.handleFilterHouses}
-          checked={true}
+          checked={false}
         />
       </form>
     );

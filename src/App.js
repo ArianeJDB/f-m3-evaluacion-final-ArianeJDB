@@ -41,15 +41,21 @@ componentDidMount(){
  
  handleFilterName(e) {
    const value = e.currentTarget.value;
-
+  
    this.setState({
      filterName: value
    })
  }
 
  handleFilterHouses(e) {
-   const {value} = e.currentTarget;
+   const value = e.currentTarget.value;
+   const checked = e.currentTarget.checked;
+   console.log(checked);
    console.log(value); 
+
+   this.setState({
+     filterHouses:[checked ? this.state.filterHouses.concat(value) : this.state.filterHouses.filter(item => item !== value)]
+   })
  }
   render() {
    return (

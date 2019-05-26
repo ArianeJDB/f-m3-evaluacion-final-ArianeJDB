@@ -2,6 +2,11 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 class CharacterDetail extends React.Component {
+
+ componentWillUnmount() {
+    this.props.resetFilterName();
+  }
+
   render() {
     const {characters} = this.props;
     

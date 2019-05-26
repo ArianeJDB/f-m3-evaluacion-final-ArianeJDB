@@ -18,12 +18,18 @@ class App extends React.Component {
    }
    this.handleFilterName = this.handleFilterName.bind(this);
    this.handleFilterHouses = this.handleFilterHouses.bind(this);
-  // this.selectHouse = this.selectHouse.bind(this);
+   this.resetFilterName = this.resetFilterName.bind(this);
    //this.handle = this.handle.bind(this);
    
  }
 componentDidMount(){
   this.getCharacters();
+}
+
+resetFilterName(){
+  this.setState({
+    filterName: ''
+  });
 }
 
  getCharacters(){
@@ -50,8 +56,6 @@ componentDidMount(){
  handleFilterHouses(e) {
    const value = e.currentTarget.value;
    const checked = e.currentTarget.checked;
-   console.log(checked);
-   console.log(value); 
 
    this.setState({
      filterHouses:[checked ? this.state.filterHouses.concat(value) : this.state.filterHouses.filter(item => item !== value)]
@@ -75,6 +79,7 @@ componentDidMount(){
         <CharacterDetail 
           takeParams={takeParams}
           characters={this.state.characters}
+          resetFilterName={this.resetFilterName}
         />
        }
        />

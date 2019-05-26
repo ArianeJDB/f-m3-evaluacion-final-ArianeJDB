@@ -13,17 +13,21 @@ class App extends React.Component {
    this.state = {
      characters: [],
      filterName: '',
-     filterHouses: []
+     filterHouses: ''
      
    }
    this.handleFilterName = this.handleFilterName.bind(this);
    this.handleFilterHouses = this.handleFilterHouses.bind(this);
    this.resetFilterName = this.resetFilterName.bind(this);
-   //this.handle = this.handle.bind(this);
-   
+   //this.saveData = this.saveData.bind(this);
  }
 componentDidMount(){
   this.getCharacters();
+  // const getItem = JSON.parse(localStorage.getItem('list'));
+  //   if (getItem !== null) {
+  //     this.setState({
+  //       characters: getItem
+  //     });
 }
 
 resetFilterName(){
@@ -87,6 +91,8 @@ resetFilterName(){
      </React.Fragment>
    );
  }
+ //localStorage.setItem('list', JSON.stringify());
 }
+
 
 export default App;

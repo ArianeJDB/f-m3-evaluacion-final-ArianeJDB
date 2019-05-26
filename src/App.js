@@ -22,12 +22,12 @@ class App extends React.Component {
    //this.saveData = this.saveData.bind(this);
  }
 componentDidMount(){
-  this.getCharacters();
-  // const getItem = JSON.parse(localStorage.getItem('list'));
-  //   if (getItem !== null) {
-  //     this.setState({
-  //       characters: getItem
-  //     });
+  const LS = JSON.parse(localStorage.getItem('characters'));
+    if(!LS || !LS.length) {
+      this.getCharacters();
+    } else {
+      this.setState({'characters': LS});
+    }
 }
 
 resetFilterName(){
@@ -41,6 +41,9 @@ resetFilterName(){
     .then(data => {
       const newData = data.map((item, index) => {
         return {...item, id:index};
+      });
+      this.setState({characters: newData}, () => {
+        localStorage.setItem('characters', JSON.stringify(this.state.characters));
       });
 
       this.setState({
@@ -91,7 +94,6 @@ resetFilterName(){
      </React.Fragment>
    );
  }
- //localStorage.setItem('list', JSON.stringify());
 }
 
 

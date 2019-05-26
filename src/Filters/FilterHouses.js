@@ -10,7 +10,7 @@ class FilterHouses extends React.Component {
           name="filterHouses" 
           value="gryffindor" 
           onChange={this.props.handleFilterHouses}
-          checked={false}
+          checked={this.props.filterHouses.includes('gryffindor')}
         />
         <label htmlFor="Slytherin">Slytherin</label>
         <input 
@@ -18,7 +18,7 @@ class FilterHouses extends React.Component {
           name="filterHouses" 
           value="slytherin"
           onChange={this.props.handleFilterHouses}
-          checked={false}
+          checked={this.props.filterHouses.includes('slytherin')}
         />
         <label htmlFor="hufflepuff">Hufflepuff</label>
         <input 
@@ -26,7 +26,7 @@ class FilterHouses extends React.Component {
           name="filterHouses" 
           value="hufflepuff"
           onChange={this.props.handleFilterHouses}
-          checked={false}
+          checked={this.props.filterHouses.includes('hufflepuff')}
         />
         <label htmlFor="ravenclaw">Ravenclaw</label>
         <input 
@@ -34,7 +34,7 @@ class FilterHouses extends React.Component {
           name="filterHouses" 
           value="ravenclaw"
           onChange={this.props.handleFilterHouses}
-          checked={false}
+          checked={this.props.filterHouses.includes('ravenclaw')}
         />
       </form>
     );

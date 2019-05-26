@@ -67,7 +67,7 @@ componentDidMount(){
           filterName={this.state.filterName}
           handleFilterName={this.handleFilterName}
           handleFilterHouses={this.handleFilterHouses}
-          //handle={this.handle}
+          filterHouses={this.state.filterHouses}
        />
        }
        />

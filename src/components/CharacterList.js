@@ -10,6 +10,13 @@ class CharacterList extends React.Component {
       <ul className="list">
       {this.props.characters
         .filter(item => item.name.toLocaleLowerCase().includes(this.props.filterName))
+        .filter(item => {
+          if(!this.props.filterHouses.length) {
+            return true
+          } else {
+            return this.props.filterHouses.includes(item.house)
+          }
+        }) 
         .map(item => {
         return (
           <li className="list-element" key={item.id}>

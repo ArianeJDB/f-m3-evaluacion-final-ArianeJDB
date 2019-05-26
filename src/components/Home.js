@@ -15,8 +15,8 @@ class Home extends React.Component {
           filterName={this.props.filterName}
         />
         <FilterHouses 
-        //filterHouses={this.props.filterHouses}
          handleFilterHouses={this.props.handleFilterHouses}
+         filterHouses={this.props.filterHouses}
         //handle={this.props.handle}
         />
         
@@ -24,6 +24,7 @@ class Home extends React.Component {
         <CharacterList 
           characters={this.props.characters} 
           filterName={this.props.filterName}
+          filterHouses={this.props.filterHouses}
         />
       </React.Fragment>
     );

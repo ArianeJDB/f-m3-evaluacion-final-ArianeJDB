@@ -24,6 +24,18 @@ header {
   flex-direction: column;
   align-items: center;
 }
+
+h2 {
+  font-size: 30px;
+  margin: 0;
+}
+.title {
+  font-size: 70px;
+  font-weight: normal;
+}
+.house {
+  font-size: 20px;
+}
 .img {
   //width: 160px;
   height: 220px;
@@ -38,8 +50,6 @@ header {
   border: solid 8px #DAA520;;
   border-radius: 8px;
   text-align: center;
-  padding-bottom: 30px;
-
 }
 
 .list {
@@ -48,20 +58,21 @@ header {
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 15px;
 }
+
 .body-detail {
   display: flex;
   justify-content: center;
   margin: 0;
-  
 }
+
 .detail {
-  border: 2px solid black;
+  border: 8px solid #DAA520;
   width: 500px;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  padding-bottom: 0;
 }
 
 .detail-img {
@@ -81,6 +92,8 @@ header {
 
 .house-container {
   display: flex;
+  justify-content: center;
+  
 
 }
 

@@ -15,7 +15,6 @@ body {
   background-image: url(https://vignette.wikia.nocookie.net/es.harrypotter/images/5/50/Wiki-background/revision/latest?cb=20140824005245);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
   background-attachment: fixed;
 }
 
@@ -28,6 +27,10 @@ header {
 h2 {
   font-size: 30px;
   margin: 0;
+  font-weight: normal;
+}
+p {
+  margin: 5px;
 }
 .title {
   font-size: 70px;
@@ -57,11 +60,15 @@ h2 {
     margin-bottom: 20px;
 }
 }
+.list-element:hover {
+  background:#DAA520;
+  opacity: 0.8;
+  transform: scale(1.05);
+  }
 
 .list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 15px;
   @media all and (max-width: 768px) {
     display: flex;
@@ -79,7 +86,7 @@ h2 {
 .detail {
   border: 8px solid #DAA520;
   width: 500px;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,12 +100,15 @@ h2 {
 
 .more {
   font-family: 'Courier New', Courier, monospace;
-  color: #DAA520;
   font-size: 18px;
 }
 
 .house-img {
   height: 60px;
+}
+
+.detail-house-img {
+  height: 150px;
 }
 
 .house-container {
@@ -110,4 +120,9 @@ h2 {
 .magic-card {
   display: flex;
   flex-direction: column;
+}
+
+.title-detail {
+  font-size: 60px;
+  font-weight: normal;
 }

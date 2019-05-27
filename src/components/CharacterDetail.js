@@ -22,16 +22,17 @@ class CharacterDetail extends React.Component {
       <div className="body-detail">
         <div className="detail">
           <img src={find.image} alt={find.name} className="detail-img" />
-          <h2>{find.name}</h2>
-          <img className="house-img" alt={this.props.house} src={find.house === 'Gryffindor' ? 'https://images-na.ssl-images-amazon.com/images/I/81mv7IXpc6L._SY606_.jpg' : find.house === 'Slytherin' ? 'https://images-na.ssl-images-amazon.com/images/I/61n%2B3Bsn6PL._SY606_.jpg': find.house === 'Hufflepuff' ? 'https://i.ebayimg.com/images/i/282998706270-0-1/s-l1000.jpg' : find.house === 'Ravenclaw' ? 'https://elenanofriki.com/3664-large_default/placa-metalica-ravenclaw-harry-potter.jpg' : <p>No es de Hogwarts</p>}/>
+          <h2 className="title-detail">{find.name}</h2>
+          <img className="detail-house-img" alt={this.props.house} src={find.house === 'Gryffindor' ? 'https://images-na.ssl-images-amazon.com/images/I/81mv7IXpc6L._SY606_.jpg' : find.house === 'Slytherin' ? 'https://images-na.ssl-images-amazon.com/images/I/61n%2B3Bsn6PL._SY606_.jpg': find.house === 'Hufflepuff' ? 'https://i.ebayimg.com/images/i/282998706270-0-1/s-l1000.jpg' : find.house === 'Ravenclaw' ? 'https://elenanofriki.com/3664-large_default/placa-metalica-ravenclaw-harry-potter.jpg' : <p>No es de Hogwarts</p>}/>
           <p>Year of birth: {find.yearOfBirth}</p>
           <p>Patronus: {find.patronus}</p>
           <p>{find.alive ? 'Está vivito y coleando' : 'Se murió muerto =('}</p>
         </div>
+        <Link to="/">Volver</Link>
       </div>
     : 
     <p>=( eres muy muggle para tanta magia</p> }
-      <Link to="/">Volver</Link>
+      
     </React.Fragment>
     );
   }

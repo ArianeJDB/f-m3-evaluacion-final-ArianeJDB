@@ -10,14 +10,11 @@ class Home extends React.Component {
         <header>
         <h1 className='title'>Mis magos favoritos</h1>
         <FilterName 
-          characters={this.props.characters} 
           handleFilterName={this.props.handleFilterName} 
-          filterName={this.props.filterName}
+          
         />
         <FilterHouses 
          handleFilterHouses={this.props.handleFilterHouses}
-         filterHouses={this.props.filterHouses}
-        //handle={this.props.handle}
         />
         
         </header>

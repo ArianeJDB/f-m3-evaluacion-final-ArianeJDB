@@ -1,8 +1,9 @@
 import React from 'react';
-import FilterName from '../Filters/FilterName';
-import CharacterList from './CharacterList'
-import FilterHouses from '../Filters/FilterHouses';
+import FilterName from '../../Filters/FilterName';
+import CharacterList from '../CharacterList/CharacterList';
+import FilterHouses from '../../Filters/FilterHouses';
 import PropTypes from 'prop-types';
+import './Home.scss';
 
 class Home extends React.Component {
   render() {

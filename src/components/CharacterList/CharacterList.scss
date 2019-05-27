@@ -1,0 +1,29 @@
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+  @media all and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.list-element {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  border: solid 8px #DAA520;;
+  border-radius: 8px;
+  text-align: center;
+  @media all and (max-width: 768px) {
+    margin-bottom: 20px;
+}
+}
+
+.list-element:hover {
+  background:#DAA520;
+  opacity: 0.8;
+  transform: scale(1.05);
+  }

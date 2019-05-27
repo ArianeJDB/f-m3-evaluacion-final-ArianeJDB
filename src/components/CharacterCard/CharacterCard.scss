@@ -1,0 +1,36 @@
+.magic-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.house-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.img {
+  height: 220px;
+  margin: 30px;
+}
+
+h2 {
+  font-size: 30px;
+  margin: 0;
+  font-weight: normal;
+}
+p {
+  margin: 5px;
+}
+.house-img {
+  height: 60px;
+}
+
+.house {
+  font-size: 20px;
+}
+
+.more {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+}

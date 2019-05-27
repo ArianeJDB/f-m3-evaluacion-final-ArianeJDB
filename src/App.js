@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.scss';
 import {fetchCharacters} from './services/fetchCharacters';
-import Home from './components/Home';
+import Home from './components/Home/Home';
 import {Switch, Route} from 'react-router-dom';
-import CharacterDetail from './components/CharacterDetail'
+import CharacterDetail from './components/CharacterDetail/CharacterDetail';
 
 
 class App extends React.Component {

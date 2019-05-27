@@ -1,5 +1,5 @@
 import React from 'react';
-import MagicCard from './CharacterCard'
+import CharacterCard from './CharacterCard'
 
 
 
@@ -20,7 +20,7 @@ class CharacterList extends React.Component {
         .map(item => {
         return (
           <li className="list-element" key={item.id}>
-            <MagicCard 
+            <CharacterCard 
               image={item.image}
               name={item.name}
               house={item.house}

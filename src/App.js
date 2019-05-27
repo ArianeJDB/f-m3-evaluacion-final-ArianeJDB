@@ -19,8 +19,8 @@ class App extends React.Component {
    this.handleFilterName = this.handleFilterName.bind(this);
    this.handleFilterHouses = this.handleFilterHouses.bind(this);
    this.resetFilterName = this.resetFilterName.bind(this);
-   //this.saveData = this.saveData.bind(this);
  }
+ 
 componentDidMount(){
   const LS = JSON.parse(localStorage.getItem('characters'));
     if(!LS || !LS.length) {

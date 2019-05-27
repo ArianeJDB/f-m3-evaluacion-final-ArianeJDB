@@ -9,13 +9,8 @@ class CharacterList extends React.Component {
       <React.Fragment>
       <ul className="list">
       {this.props.characters
-        .filter(item => {
-          if(!this.props.filterHouses.length) {
-            return true
-          } else {
-            return this.props.filterHouses.includes(item.house)
-          }
-        }) 
+        .filter(item => 
+          item.house.includes(this.props.filterHouses))
         .filter(item => item.name.toLocaleLowerCase().includes(this.props.filterName))
         .map(item => {
         return (

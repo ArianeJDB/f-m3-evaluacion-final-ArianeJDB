@@ -7,10 +7,10 @@ class FilterHouses extends React.Component {
       <div className="house-select">
       <label>Selecciona una casa</label>
       <select onChange={this.props.handleFilterHouses}>
-        <option value="gryffindor">Gryffindor</option>
-        <option value="slytherin">Slytherin</option>
-        <option value="hufflepuff">Hufflepuff</option>
-        <option value="ravenclaw">Ravenclaw</option>
+        <option value="Gryffindor">Gryffindor</option>
+        <option value="Slytherin">Slytherin</option>
+        <option value="Hufflepuff">Hufflepuff</option>
+        <option value="Ravenclaw">Ravenclaw</option>
       </select>
       </div>
     );

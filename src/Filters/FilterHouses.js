@@ -6,7 +6,7 @@ class FilterHouses extends React.Component {
       <form className="search-houses">
         <label htmlFor="gryffindor">Gryffindor</label>
         <input 
-          type="checkbox" 
+          type="radio" 
           name="filterHouses" 
           value="gryffindor" 
           onChange={this.props.handleFilterHouses}
@@ -14,7 +14,7 @@ class FilterHouses extends React.Component {
         />
         <label htmlFor="Slytherin">Slytherin</label>
         <input 
-          type="checkbox" 
+          type="radio" 
           name="filterHouses" 
           value="slytherin"
           onChange={this.props.handleFilterHouses}
@@ -22,7 +22,7 @@ class FilterHouses extends React.Component {
         />
         <label htmlFor="hufflepuff">Hufflepuff</label>
         <input 
-          type="checkbox" 
+          type="radio" 
           name="filterHouses" 
           value="hufflepuff"
           onChange={this.props.handleFilterHouses}
@@ -30,7 +30,7 @@ class FilterHouses extends React.Component {
         />
         <label htmlFor="ravenclaw">Ravenclaw</label>
         <input 
-          type="checkbox" 
+          type="radio" 
           name="filterHouses" 
           value="ravenclaw"
           onChange={this.props.handleFilterHouses}

@@ -65,7 +65,7 @@ resetFilterName(){
    const checked = e.currentTarget.checked;
 
    this.setState({
-     filterHouses:[checked ? this.state.filterHouses.concat(value) : this.state.filterHouses.filter(item => item !== value)]
+    filterHouses:[checked ? this.state.filterHouses.concat(value) : this.state.filterHouses.filter(item => item !== value)]
    })
  }
   render() {

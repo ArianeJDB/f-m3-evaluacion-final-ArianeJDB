@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 class CharacterCard extends React.Component {
   render() {
     return(
@@ -14,5 +16,12 @@ class CharacterCard extends React.Component {
       </div>
     );
   }
+}
+CharacterCard.propTypes = {
+  src: PropTypes.string,
+  alt: PropTypes.string,
+  name: PropTypes.string,
+  house: PropTypes.string,
+  id: PropTypes.number
 }
 export default CharacterCard;

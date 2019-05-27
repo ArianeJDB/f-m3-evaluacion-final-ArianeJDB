@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class FilterHouses extends React.Component {
   render() {
@@ -15,4 +16,9 @@ class FilterHouses extends React.Component {
     );
   }
 }
+
+FilterHouses.propTypes = {
+  handleFilterHouses: PropTypes.func,
+}
+
 export default FilterHouses;

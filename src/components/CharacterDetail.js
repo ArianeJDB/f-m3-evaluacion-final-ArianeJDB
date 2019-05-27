@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class CharacterDetail extends React.Component {
 
@@ -35,4 +36,13 @@ class CharacterDetail extends React.Component {
     );
   }
 }
+
+CharacterDetail.propTypes = {
+  src: PropTypes.string,
+  alt: PropTypes.string,
+  name: PropTypes.string,
+  characters: PropTypes.arrayOf(PropTypes.object),
+  house: PropTypes.string,
+  id: PropTypes.number
+} 
 export default CharacterDetail;

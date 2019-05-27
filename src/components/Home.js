@@ -2,6 +2,7 @@ import React from 'react';
 import FilterName from '../Filters/FilterName';
 import CharacterList from './CharacterList'
 import FilterHouses from '../Filters/FilterHouses';
+import PropTypes from 'prop-types';
 
 class Home extends React.Component {
   render() {
@@ -27,5 +28,12 @@ class Home extends React.Component {
     );
   }
 }
+Home.propTypes = {
+  handleFilterName: PropTypes.func,
+  handleFilterHouses: PropTypes.func,
+  characters: PropTypes.arrayOf(PropTypes.object),
+  filterName: PropTypes.string,
+  filterHouses: PropTypes.string,
 
+}
 export default Home;

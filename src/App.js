@@ -60,7 +60,6 @@ resetFilterName(){
 
  handleFilterHouses(e) {
    const value = e.currentTarget.value;
-   console.log(value);
    this.setState({
     filterHouses: value
    })

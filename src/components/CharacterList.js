@@ -1,6 +1,6 @@
 import React from 'react';
 import CharacterCard from './CharacterCard'
-
+import PropTypes from 'prop-types';
 
 
 class CharacterList extends React.Component {
@@ -35,4 +35,15 @@ class CharacterList extends React.Component {
     );
   }
 }
+
+CharacterList.propTypes = {
+  image: PropTypes.string,
+  alt: PropTypes.string,
+  name: PropTypes.string,
+  house: PropTypes.string,
+  characters: PropTypes.arrayOf(PropTypes.object),
+  filterHouses: PropTypes.string,
+  filterName: PropTypes.string
+}
+
 export default CharacterList;
